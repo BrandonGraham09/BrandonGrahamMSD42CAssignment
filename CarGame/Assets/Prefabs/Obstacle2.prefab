@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 5584094413954966081}
   - component: {fileID: 299333826902073072}
   - component: {fileID: -8897160418510607738}
-  - component: {fileID: 3968518526254895110}
+  - component: {fileID: -799588908268032430}
+  - component: {fileID: -6692149240149412968}
+  - component: {fileID: -8634389508589722481}
   m_Layer: 0
   m_Name: Obstacle2
   m_TagString: Untagged
@@ -98,8 +100,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 0}
---- !u!60 &3968518526254895110
-PolygonCollider2D:
+--- !u!50 &-799588908268032430
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226861767354538856}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!70 &-6692149240149412968
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,54 +131,22 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.07, y: 2.29}
-    newSize: {x: 2.07, y: 2.29}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.765, y: -0.715}
-      - {x: 0.875, y: -0.645}
-      - {x: 0.875, y: -0.575}
-      - {x: 0.805, y: -0.525}
-      - {x: 0.655, y: -0.475}
-      - {x: 0.465, y: -0.385}
-      - {x: 0.465, y: -0.305}
-      - {x: 0.325, y: 0.175}
-      - {x: 0.275, y: 0.39499998}
-      - {x: 0.24499999, y: 0.475}
-      - {x: 0.235, y: 0.585}
-      - {x: 0.205, y: 0.655}
-      - {x: 0.13499999, y: 0.935}
-      - {x: 0.105, y: 0.97499996}
-      - {x: 0.065, y: 0.995}
-      - {x: -0.035, y: 0.995}
-      - {x: -0.085, y: 0.98499995}
-      - {x: -0.13499999, y: 0.955}
-      - {x: -0.175, y: 0.84499997}
-      - {x: -0.185, y: 0.765}
-      - {x: -0.285, y: 0.375}
-      - {x: -0.355, y: 0.095}
-      - {x: -0.435, y: -0.205}
-      - {x: -0.49499997, y: -0.405}
-      - {x: -0.73499995, y: -0.505}
-      - {x: -0.875, y: -0.565}
-      - {x: -0.885, y: -0.615}
-      - {x: -0.85499996, y: -0.66499996}
-      - {x: -0.615, y: -0.78499997}
-      - {x: -0.36499998, y: -0.895}
-      - {x: -0.16499999, y: -0.995}
-      - {x: -0.044999998, y: -1.045}
-      - {x: 0.024999999, y: -1.045}
-      - {x: 0.145, y: -0.995}
-      - {x: 0.355, y: -0.895}
-      - {x: 0.73499995, y: -0.705}
+  m_Size: {x: 2.07, y: 2.29}
+  m_Direction: 0
+--- !u!114 &-8634389508589722481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226861767354538856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc988542b58fff4dad3680fd956a3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
