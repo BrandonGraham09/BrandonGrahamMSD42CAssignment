@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.5f;
+    [SerializeField] float health = 100f;
 
     float xMin, xMax;
 
@@ -20,6 +21,23 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        ProcessHit(dmgDealer);
+    }
+
+    private void ProcessHit(DamageDealer dmgDealer)
+    {
+        health -= dmgDealer.GetDamage();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     //setup the boundaries according to camera

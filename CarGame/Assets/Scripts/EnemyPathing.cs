@@ -6,7 +6,8 @@ public class EnemyPathing : MonoBehaviour
 {
 
     [SerializeField] List<Transform> waypoints;
-    [SerializeField] float enemieMoveSpeed = 2f;
+
+    [SerializeField] WaveConfig waveConfig;
 
     //Saves the waypoint in which we want to go 
     int waypointIndex = 0;
@@ -15,6 +16,9 @@ public class EnemyPathing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        waypoints = waveConfig.GetWaypoints();
+
         // set the start postition of Enemy to the 1st waypoint
         transform.position = waypoints[waypointIndex].transform.position;
 
@@ -35,7 +39,7 @@ public class EnemyPathing : MonoBehaviour
 
             targetPosition.z = 0f;
 
-            var enemyMovement = enemieMoveSpeed * Time.deltaTime;
+            var enemyMovement = waveConfig.GetEnemyMoveSpeed() * Time.deltaTime;
 
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, enemyMovement);
 
@@ -50,4 +54,10 @@ public class EnemyPathing : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void SetWaveConfig(WaveConfig waveConfigToSet)
+    {
+        waveConfig = waveConfigToSet;
+    }
+
 }
