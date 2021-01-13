@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2566498473741136240}
   - component: {fileID: 5278625169620717693}
   - component: {fileID: -3523560856013684142}
+  - component: {fileID: 6954668492957476015}
   m_Layer: 0
   m_Name: Obstacle4
   m_TagString: Untagged
@@ -168,3 +169,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+--- !u!114 &6954668492957476015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067775438040640975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e977c9e2d642c942940777fd2e66e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
