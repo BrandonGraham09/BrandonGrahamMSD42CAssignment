@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -993730489850409031}
   - component: {fileID: 6764646337615384106}
   - component: {fileID: -6567799672501230145}
-  - component: {fileID: 4239310949959682428}
+  - component: {fileID: -7344673942564057073}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -136,7 +136,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 4.36, y: 2.8}
   m_Direction: 0
---- !u!114 &4239310949959682428
+--- !u!114 &-7344673942564057073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +145,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2515946902694968234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e977c9e2d642c942940777fd2e66e61, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bb52444557ad5b42841154f31c76541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  enemyBulletPrefab: {fileID: 0}
+  enemyBulletSpeed: 0.3
   health: 100
+  enemyDeathSound: {fileID: 8300000, guid: a7b31e1e24cf2b14e96ebba55c998217, type: 3}
+  enemyDeathSoundVolume: 0.5

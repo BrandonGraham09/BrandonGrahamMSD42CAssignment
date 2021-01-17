@@ -15,6 +15,12 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float enemyBulletSpeed = 0.3f;
 
+    [SerializeField] float health = 100f;
+
+    [SerializeField] AudioClip enemyDeathSound;
+
+    [SerializeField] [Range(0, 1)] float enemyDeathSoundVolume = 0.75f;
+
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
@@ -45,4 +51,29 @@ public class Enemy : MonoBehaviour
 
         enemyBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyBulletSpeed);
     }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        ProcessHit(dmgDealer);
+    }
+
+    private void ProcessHit(DamageDealer dmgDealer)
+    {
+        health -= dmgDealer.GetDamage();
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+
+        AudioSource.PlayClipAtPoint(enemyDeathSound, Camera.main.transform.position, enemyDeathSoundVolume);
+    }
+
 }

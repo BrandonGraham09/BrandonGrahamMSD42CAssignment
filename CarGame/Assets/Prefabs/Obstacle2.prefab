@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -799588908268032430}
   - component: {fileID: -6692149240149412968}
   - component: {fileID: -8634389508589722481}
-  - component: {fileID: 7098547947773654047}
+  - component: {fileID: 1530236971941783888}
   m_Layer: 0
   m_Name: Obstacle2
   m_TagString: Untagged
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
---- !u!114 &7098547947773654047
+--- !u!114 &1530236971941783888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1226861767354538856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e977c9e2d642c942940777fd2e66e61, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bb52444557ad5b42841154f31c76541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  enemyBulletPrefab: {fileID: 0}
+  enemyBulletSpeed: 0.3
   health: 100
+  enemyDeathSound: {fileID: 8300000, guid: a7b31e1e24cf2b14e96ebba55c998217, type: 3}
+  enemyDeathSoundVolume: 0.5
