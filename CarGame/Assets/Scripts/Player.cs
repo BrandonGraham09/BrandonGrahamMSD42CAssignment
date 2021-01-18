@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 0.5f;
     [SerializeField] float health = 100f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
+
     float xMin, xMax;
 
     // Start is called before the first frame update
@@ -36,8 +39,20 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+        Destroy(explosion, explosionDuration);
+
+        FindObjectOfType<Level>().LoadGameOver();
+
     }
 
     //setup the boundaries according to camera
