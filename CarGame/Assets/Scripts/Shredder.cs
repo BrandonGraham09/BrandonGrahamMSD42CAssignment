@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Shredder : MonoBehaviour
 {
+
+
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
-        Destroy(otherObject.gameObject);
+        shredderSound(otherObject);
     }
 
+    private static void shredderSound(Collider2D otherObject)
+    {
+        Destroy(otherObject.gameObject);
 
+    }
 }
