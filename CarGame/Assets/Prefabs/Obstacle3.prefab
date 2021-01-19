@@ -120,7 +120,7 @@ MonoBehaviour:
   enemyBulletSpeed: 8
   health: 100
   enemyDeathSound: {fileID: 8300000, guid: a7b31e1e24cf2b14e96ebba55c998217, type: 3}
-  enemyDeathSoundVolume: 0.5
+  enemyDeathSoundVolume: 0.1
   deathVFX: {fileID: 8639234823002106211, guid: 9561d00b0e62d784cb444bc6bf454e82, type: 3}
   explosionDuration: 1
 --- !u!114 &7053944460579627469
