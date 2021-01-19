@@ -24,6 +24,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration = 1f;
 
+    
+
+
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
@@ -55,11 +58,17 @@ public class Enemy : MonoBehaviour
         enemyBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyBulletSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D otherObject)
+    private void OnTriggerEnter2D(Collider2D bullet)
     {
-        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+        DamageDealer DmgDeal = bullet.gameObject.GetComponent<DamageDealer>();
 
-        ProcessHit(dmgDealer);
+        if (!DmgDeal)
+        {
+            return;
+        }
+
+        ProcessHit(DmgDeal);
+
     }
 
     private void ProcessHit(DamageDealer dmgDealer)
@@ -81,6 +90,7 @@ public class Enemy : MonoBehaviour
         Destroy(explosion, explosionDuration);
 
         AudioSource.PlayClipAtPoint(enemyDeathSound, Camera.main.transform.position, enemyDeathSoundVolume);
+
     }
 
 }

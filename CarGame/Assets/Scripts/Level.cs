@@ -20,12 +20,20 @@ public class Level : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("CarGame");
+        //reset the GameSession from the begining
+        FindObjectOfType<GameSession>().ResetGame();
     }
 
     public void LoadGameOver()
     {
         StartCoroutine(WaitAndLoad());
     }
+
+    public static void LoadWinner()
+    {
+        SceneManager.LoadScene("WinnerScene");
+    }
+    
 
     public void QuitGame()
     {

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1107689935617080518}
   - component: {fileID: 7511485454195283676}
   - component: {fileID: -3182774999617326058}
-  - component: {fileID: 7006308426687658657}
   - component: {fileID: 7540130292156816776}
   - component: {fileID: 5383251589688011002}
+  - component: {fileID: -3120090980876556078}
   m_Layer: 0
   m_Name: Obstacle1
   m_TagString: Untagged
@@ -114,22 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
---- !u!70 &7006308426687658657
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3313158918371009960}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 5, y: 5}
-  m_Direction: 0
 --- !u!50 &7540130292156816776
 Rigidbody2D:
   serializedVersion: 4
@@ -164,12 +148,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotCounter: 0
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
-  enemyBulletPrefab: {fileID: 0}
+  minTimeBetweenShots: 30
+  maxTimeBetweenShots: 40
+  enemyBulletPrefab: {fileID: 2515946902694968234, guid: 7a4a9e0955f4e5a4cb34c811a0b215d7, type: 3}
   enemyBulletSpeed: 0.3
   health: 100
   enemyDeathSound: {fileID: 8300000, guid: a7b31e1e24cf2b14e96ebba55c998217, type: 3}
   enemyDeathSoundVolume: 0.1
   deathVFX: {fileID: 8639234823002106211, guid: 9561d00b0e62d784cb444bc6bf454e82, type: 3}
   explosionDuration: 1
+--- !u!60 &-3120090980876556078
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3313158918371009960}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.68, y: -1.3299999}
+      - {x: 1.89, y: -1.3299999}
+      - {x: 1.89, y: 1.3299999}
+      - {x: -1.89, y: 1.3299999}
+      - {x: -1.89, y: -1.31}
+      - {x: -1.88, y: -1.3299999}
+      - {x: -0.72999996, y: -1.3299999}
+      - {x: -0.77, y: -1.1999999}
+      - {x: -1.23, y: 0.28}
+      - {x: 0.96999997, y: -0.90999997}
+    - - {x: -1.4699999, y: -1.0799999}
+      - {x: -1.4599999, y: -1.0799999}
+      - {x: -1.43, y: -1.05}
+      - {x: -1.4399999, y: -1.2099999}
+      - {x: -1.61, y: -1.22}
+      - {x: -1.5999999, y: -1.22}
+    - - {x: -1.23, y: -1.04}
+      - {x: -1.1899999, y: -1.0799999}
+      - {x: -1.0799999, y: -1.1999999}
+      - {x: -1.0699999, y: -1.1999999}
+      - {x: -1.06, y: -1.2099999}
+      - {x: -1.22, y: -1.2099999}
+    - - {x: 1.0799999, y: -1.1899999}
+      - {x: 1.1899999, y: -1.09}
+      - {x: 1.1899999, y: -1.0799999}
+      - {x: 1.22, y: -1.05}
+      - {x: 1.22, y: -1.2099999}
+      - {x: 1.05, y: -1.22}
+      - {x: 1.06, y: -1.22}
+    - - {x: 1.43, y: -1.03}
+      - {x: 1.42, y: -1.04}
+      - {x: 1.4599999, y: -1.0799999}
+      - {x: 1.61, y: -1.22}
+      - {x: 1.4399999, y: -1.2099999}

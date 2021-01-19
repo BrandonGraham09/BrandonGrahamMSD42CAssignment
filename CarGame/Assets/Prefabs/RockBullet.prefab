@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotCounter: 0
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
-  enemyBulletPrefab: {fileID: 0}
+  minTimeBetweenShots: 30
+  maxTimeBetweenShots: 40
+  enemyBulletPrefab: {fileID: 2515946902694968234, guid: 7a4a9e0955f4e5a4cb34c811a0b215d7, type: 3}
   enemyBulletSpeed: 0.3
   health: 100
   enemyDeathSound: {fileID: 8300000, guid: a7b31e1e24cf2b14e96ebba55c998217, type: 3}
